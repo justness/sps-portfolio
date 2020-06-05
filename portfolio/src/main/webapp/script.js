@@ -13,16 +13,16 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Gives a random number from 1-6.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomNumber() {
+  const numbers =
+      ['1', '2', '3', '4', '5', '6'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random number.
+  const number = numbers[Math.floor(Math.random() * numbers.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const numberContainer = document.getElementById('number-container');
+  numberContainer.innerText = number;
 }
