@@ -4,30 +4,18 @@
     <meta charset="UTF-8">
     <title>&#128187</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="snake.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1 id="title">hello world.</h1>
+      <div id="content">
+      <!--https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e/-->
+      <canvas id="snakeCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
+      <!--TO-DO: Figure out why onload does not work.-->
       <script>
-        document.getElementById('title').onmouseover = function() {scramble()};
-        document.getElementById('title').onmouseout = function() {unscramble()};
-      </script>
-      <p1>Please select an option.</p1><br><br>
-      <p2><a href="#">> about me</a></p2><br>
-      <p2><a href="#">> projects</a></p2><br>
-      <p2><a href="blog.html">> blog</a></p2><br>
-      <p2><a href="#">> contact</a></p2>
-      <script>
-        document.getElementById('').onclick = function() {}; 
-        document.getElementById('').onclick = function() {};
-      </script>
-      <!--TO-DO:Add function to open/close sideways drop-down.-->
-      <br><br>
-      <p3><a id="game-start" href="snake.html">START GAME</a></p3><br>
-      <img id="controllers" src="/images/controllers.png">
-    </div>
-    <br>
+        document.getElementById('snakeCanvas').onmouseover = function() {snake()};
+      </script><br>
+      <p1><a href="index.html">back</a></p1>
+      </div>
   </body>
   <body>
     <div id="iconbar">

@@ -1,4 +1,4 @@
-/*TO-DO: Make alterations for mobile compatibility.*/
+/*TO-DO: Make alterations for responsive compatibility.*/
 html{
     height: 100%;
     background-color:#434655;
@@ -71,6 +71,7 @@ a:hover{
 }
 
 #title {
+
 }
 #content {
     margin-left: 33%;
@@ -78,10 +79,10 @@ a:hover{
     width: 30%;
 }
 #blogpost {
-    margin-left: 33%;
+    margin-left: 35%;
     margin-right: 33%;
-    width: 34%;
-    height: 225px;
+    width: 32%;
+    height: 200px;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -90,6 +91,9 @@ a:hover{
 }
 #game-start:hover a:hover{
     color:#56cdea;
+}
+#snakeCanvas{
+
 }
 #controllers {
     position: absolute;
