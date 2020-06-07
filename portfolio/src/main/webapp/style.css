@@ -1,11 +1,15 @@
-body, html {
-    cursor: url("/images/cursor_norm.png"),auto;
+/*TO-DO: Make alterations for mobile compatibility.*/
+html{
     height: 100%;
     background-color:#434655;
     background-image: url("/images/cabinet.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: url("/images/cursor_norm.png"),auto;
+}
+body {
+    margin-top: 15%;
 }
 h1 {
     font-family: 'IBM Plex Mono', monospace;
@@ -13,7 +17,6 @@ h1 {
     font-weight: 100;
     font-stretch: expanded;
     color: #30323D;
-    padding-top: 225px;
     line-height: 0px;
 }
 p1 {
@@ -30,12 +33,18 @@ p2{
     color: #30323D;
     padding-left: 3em;
 }
+p3{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #30323D;
+    padding-left: 3em;
+}
 
 a{
     color:#5c80bc;
     text-decoration: none;
 }
-
 a:hover{
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -45,12 +54,37 @@ a:hover{
     cursor: url("/images/cursor_hover.png"),auto;
 }
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #5c80bc;
+    border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb{
+    background: #E8C54C;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(255, 236, 169);
+    border-radius: 10px;
+}
+
+#title {
+}
 #content {
     margin-left: 33%;
     margin-right: 33%;
     width: 30%;
 }
-
+#blogpost {
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 34%;
+    height: 240px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
 #game-start a{
     color:#5c80bc
 }
@@ -58,6 +92,7 @@ a:hover{
     color:#56cdea;
 }
 #iconbar {
-    text-align: center;
-    margin-top: 16%;
+    position: absolute;
+    bottom: 7%;
+    left: 44%;
 }

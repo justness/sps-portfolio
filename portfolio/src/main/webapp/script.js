@@ -12,17 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Gives a random number from 1-6.
- */
-function addRandomNumber() {
-  const numbers =
-      ['1', '2', '3', '4', '5', '6'];
-
-  // Pick a random number.
-  const number = numbers[Math.floor(Math.random() * numbers.length)];
-
-  // Add it to the page.
-  const numberContainer = document.getElementById('number-container');
-  numberContainer.innerText = number;
+function scramble(){
+    var title = new String(document.getElementById('title').innerText);
+    var temp = new String(title);
+    for (var i=0;i<temp.length-1;i++){
+        var coinFlip = Math.random() >= 0.5;
+        if (coinFlip == false){
+            temp = temp.substr(0,i) + temp.charAt(i).toUpperCase() + temp.slice(i+1);
+        }
+        else{
+            temp = temp.substr(0,i) + temp.charAt(i).toLowerCase() + temp.slice(i+1);
+        }
+    }
+    document.getElementById('title').innerHTML = temp;
+}
+function unscramble(){
+    var title = new String(document.getElementById('title').innerText);
+    var temp = new String(title);
+    for (var i=0;i<title.length-1;i++){
+        temp = temp.substr(0,i) + temp.charAt(i).toLowerCase() + temp.slice(i+1);
+    }
+    document.getElementById('title').innerHTML = temp;
 }
