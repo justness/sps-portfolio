@@ -81,7 +81,7 @@ a:hover{
     margin-left: 33%;
     margin-right: 33%;
     width: 34%;
-    height: 240px;
+    height: 225px;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -90,6 +90,11 @@ a:hover{
 }
 #game-start:hover a:hover{
     color:#56cdea;
+}
+#controllers {
+    position: absolute;
+    bottom: 22%;
+    width: 36%;
 }
 #iconbar {
     position: absolute;
