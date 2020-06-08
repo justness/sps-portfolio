@@ -12,17 +12,59 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function scramble(){
+    var title = new String(document.getElementById('title').innerText);
+    var temp = new String(title);
+    for (var i=0;i<temp.length-1;i++){
+        var coinFlip = Math.random() >= 0.5;
+        if (coinFlip == false){
+            temp = temp.substr(0,i) + temp.charAt(i).toUpperCase() + temp.slice(i+1);
+        }
+        else{
+            temp = temp.substr(0,i) + temp.charAt(i).toLowerCase() + temp.slice(i+1);
+        }
+    }
+    document.getElementById('title').innerHTML = temp;
+}
+function unscramble(){
+    var title = new String(document.getElementById('title').innerText);
+    var temp = new String(title);
+    for (var i=0;i<title.length-1;i++){
+        temp = temp.substr(0,i) + temp.charAt(i).toLowerCase() + temp.slice(i+1);
+    }
+    document.getElementById('title').innerHTML = temp;
+}
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+//TO-DO: Clean up this function with helpers. Very bloated right now.
+function open(selection){
+    if (selection === "about"){
+        if (document.getElementById("aboutcontent").style.display === "none"){
+            document.getElementById("aboutcontent").style.display = "block";
+            document.getElementById("projectscontent").style.display = "none";
+            document.getElementById("contactcontent").style.display = "none";
+        }
+        else{
+            document.getElementById("aboutcontent").style.display = "none";
+        }
+    }
+    if (selection === "projects"){
+        if (document.getElementById("projectscontent").style.display === "none"){
+            document.getElementById("projectscontent").style.display = "block";
+            document.getElementById("aboutcontent").style.display = "none";
+            document.getElementById("contactcontent").style.display = "none";
+        }
+        else{
+            document.getElementById("projectscontent").style.display = "none";
+        }
+    }
+    if (selection === "contact"){
+        if (document.getElementById("contactcontent").style.display === "none"){
+            document.getElementById("contactcontent").style.display = "block";
+            document.getElementById("aboutcontent").style.display = "none";
+            document.getElementById("projectscontent").style.display = "none";
+        }
+        else{
+            document.getElementById("contactcontent").style.display = "none";
+        }
+    }
 }

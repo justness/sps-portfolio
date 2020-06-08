@@ -1,9 +1,127 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/*TO-DO: Make alterations for responsive compatibility.*/
+html{
+    height: 100%;
+    background-color:#434655;
+    background-image: url("/images/cabinet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: url("/images/cursor_norm.png"),auto;
+}
+body {
+    margin-top: 15%;
+}
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 100;
+    font-stretch: expanded;
+    color: #30323D;
+    line-height: 0px;
+}
+p1 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: expanded;
+    color: #30323D;
+}
+p2{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #30323D;
+    padding-left: 3em;
+}
+p3{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #30323D;
+    padding-left: 3em;
 }
 
-#greeting-container {
-  margin-top: 20px;
+a{
+    color:#5c80bc;
+    text-decoration: none;
+}
+a:hover{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    color:#56cdea;
+    opacity: 1;
+    text-decoration: none;
+    cursor: url("/images/cursor_hover.png"),auto;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #5c80bc;
+    border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb{
+    background: #E8C54C;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(255, 236, 169);
+    border-radius: 10px;
+}
+
+#title {
+
+}
+#content {
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 30%;
+}
+#subcontent{
+    margin-left: 43%;
+    width: 20%;
+    position: absolute;
+}
+#about {
+}
+#aboutcontent{
+    display: none;
+}
+#projects {
+}
+#projectscontent{
+    display: none;
+}
+#contact {
+}
+#contactcontent{
+    display: none;
+}
+#blogpost {
+    margin-left: 35%;
+    margin-right: 33%;
+    width: 32%;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#game-start a{
+    color:#5c80bc
+}
+#game-start:hover a:hover{
+    color:#56cdea;
+}
+#snakeCanvas{
+
+}
+#controllers {
+    position: absolute;
+    bottom: 22%;
+    width: 36%;
+}
+#iconbar {
+    position: absolute;
+    bottom: 7%;
+    left: 44%;
 }
