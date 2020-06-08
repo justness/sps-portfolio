@@ -34,3 +34,37 @@ function unscramble(){
     }
     document.getElementById('title').innerHTML = temp;
 }
+
+//TO-DO: Clean up this function with helpers. Very bloated right now.
+function open(selection){
+    if (selection === "about"){
+        if (document.getElementById("aboutcontent").style.display === "none"){
+            document.getElementById("aboutcontent").style.display = "block";
+            document.getElementById("projectscontent").style.display = "none";
+            document.getElementById("contactcontent").style.display = "none";
+        }
+        else{
+            document.getElementById("aboutcontent").style.display = "none";
+        }
+    }
+    if (selection === "projects"){
+        if (document.getElementById("projectscontent").style.display === "none"){
+            document.getElementById("projectscontent").style.display = "block";
+            document.getElementById("aboutcontent").style.display = "none";
+            document.getElementById("contactcontent").style.display = "none";
+        }
+        else{
+            document.getElementById("projectscontent").style.display = "none";
+        }
+    }
+    if (selection === "contact"){
+        if (document.getElementById("contactcontent").style.display === "none"){
+            document.getElementById("contactcontent").style.display = "block";
+            document.getElementById("aboutcontent").style.display = "none";
+            document.getElementById("projectscontent").style.display = "none";
+        }
+        else{
+            document.getElementById("contactcontent").style.display = "none";
+        }
+    }
+}

@@ -7,24 +7,40 @@
     <script src="script.js"></script>
   </head>
   <body>
+      <div id="subcontent">
+        <br><br><br>
+        <p2 id="aboutcontent">Hello! I'm Ness, a third year undergraduate 
+            computer science/biology student at McGill University. I'm 
+            passionate about video game development, ecological interactions, 
+            and designing for accessibility!<br><br></p2>
+        <p2 id="projectscontent"><iframe src="https://drive.google.com/file/d/1UOitlWymMSxsbpIatGugj2PXspgVoKlG/preview" width="213" height="160"></iframe><br><br></p2>
+        <p2 id="contactcontent">Please reach me through the social media 
+            channels linked at the bottom of this page.<br><br> My email 
+            address is vanessa.chu@mail.mcgill.ca.</p2>
+      </div>
+  </body>
+  <body>
     <div id="content">
       <h1 id="title">hello world.</h1>
       <script>
         document.getElementById('title').onmouseover = function() {scramble()};
         document.getElementById('title').onmouseout = function() {unscramble()};
       </script>
-      <p1>Please select an option.</p1><br><br>
-      <p2><a href="#">> about me</a></p2><br>
-      <p2><a href="#">> projects</a></p2><br>
+      <p1>Please select an option.</p1><br><br><br>
+      <p2><a id="about" href="#">> about me</a></p2><br>
+      <p2><a id="projects" href="#">> projects</a></p2><br>
       <p2><a href="blog.html">> blog</a></p2><br>
-      <p2><a href="#">> contact</a></p2>
+      <p2><a id="contact" href="#">> contact</a></p2>
       <script>
-        document.getElementById('').onclick = function() {}; 
-        document.getElementById('').onclick = function() {};
+        document.getElementById('about').onclick = function() {open("about")};
+        document.getElementById('projects').onclick = function() {open("projects")};
+        document.getElementById('contact').onclick = function() {open("contact")};
       </script>
-      <!--TO-DO:Add function to open/close sideways drop-down.-->
       <br><br>
-      <p3><a id="game-start" href="snake.html">START GAME</a></p3><br>
+      <p3><a id="game-start" href="snake.html">START GAME</a></p3><br><br><br><br>
+      <p1>Created during the Summer 2020 Google SPS.</p1>
+    </div>
+    <div id="content">
       <img id="controllers" src="/images/controllers.png">
     </div>
     <br>
