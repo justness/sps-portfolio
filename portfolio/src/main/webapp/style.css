@@ -70,6 +70,10 @@ a:hover{
     border-radius: 10px;
 }
 
+
+#greeting-container{
+    margin-top: 20px;
+}
 #title {
 
 }
