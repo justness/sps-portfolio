@@ -75,4 +75,8 @@ function getGreeting(){
   });
 }
 
-
+function getCoelho(){
+      fetch('/data').then(response => response.json()).then((quotes) => {
+    document.getElementById('coelho-container').innerText = quotes;
+  }).then(data => console.log(data));
+}
