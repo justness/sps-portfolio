@@ -14,10 +14,12 @@
 
 package com.google.sps.servlets;
 
+import com.google.sps.data.Comment;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Date;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,30 +29,36 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  public ArrayList<String> coelho;
-
-  public void init(){
-      coelho = new ArrayList<String>();
-      coelho.add("I can choose either to be a victim of the world or an adventurer in search of treasure.");
-      coelho.add("Life is too short, or too long, for me to allow myself the luxury of living it so badly.");
-      coelho.add("When we strive to become better than we are, everything around us becomes better, too.");
-      coelho.add("At every moment of our lives, we all have one foot in a fairy tale and the other in the abyss.");
-      coelho.add("And, when you can\'t go back, you have to worry only about the best way of moving forward.");
-  }
+  private ArrayList<Comment> comments = new ArrayList<Comment>();
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        /*fetch-walkthrough*/
-    //response.setContentType("text/html;");
-    //response.getWriter().println("<h1>Hello Ness!</h1>\n");
-        /*JSON-walkthrough*/
-    //response.setContentType("application/json;");
-    //response.getWriter().println(convertToJsonUsingGson(coelho));
+    response.setContentType("text/html");
+    String json = convertToJsonUsingGson(comments);
+    response.getWriter().println(json);
   }
 
-  private String convertToJsonUsingGson(ArrayList coelho) {
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    Date time = new Date();
+    String username = getParameter(request, "username", "") + ": ";
+    String comment = getParameter(request, "comment", "");
+    Comment newComment = new Comment(time, username, comment);
+    comments.add(newComment);
+    response.sendRedirect("/blog.html");
+  }
+
+  private String convertToJsonUsingGson(ArrayList aList) {
     Gson gson = new Gson();
-    String json = gson.toJson(coelho);
+    String json = gson.toJson(aList);
     return json;
+  }
+
+  private String getParameter(HttpServletRequest request, String name, String defaultValue) {
+    String value = request.getParameter(name);
+    if (value == null) {
+      return defaultValue;
+    }
+    return value;
   }
 }

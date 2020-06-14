@@ -70,15 +70,12 @@ a:hover{
     border-radius: 10px;
 }
 
-
-#greeting-container{
-    margin-top: 20px;
-}
-#coelho-container{
-    margin-top: 40px;
+#comments-container{
+    margin:20px;
+    background-color: #ffffff;
+    width: 400px;
 }
 #title {
-
 }
 #content {
     margin-left: 33%;
