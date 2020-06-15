@@ -69,14 +69,10 @@ function open(selection){
     }
 }
 
-function getGreeting(){
-      fetch('/data').then(response => response.text()).then((greeting) => {
-    document.getElementById('greeting-container').innerText = greeting;
-  });
-}
-
-function getCoelho(){
-      fetch('/data').then(response => response.json()).then((quotes) => {
-    document.getElementById('coelho-container').innerText = quotes;
+function getComments(){
+    fetch('/data').then(response => response.text()).then((comments) => {
+    document.getElementById('comments-container').innerText = comments;
   }).then(data => console.log(data));
 }
+
+
