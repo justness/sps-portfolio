@@ -14,11 +14,13 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
 import com.google.sps.data.Comment;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,6 +47,15 @@ public class DataServlet extends HttpServlet {
     String comment = getParameter(request, "comment", "");
     Comment newComment = new Comment(time, username, comment);
     comments.add(newComment);
+
+    Entity comEntity = new Entity("Comment");
+    comEntity.setProperty("time", time);
+    comEntity.setProperty("username", username);
+    comEntity.setProperty("comment", comment);
+    
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    datastore.put(comEntity);
+
     response.sendRedirect("/blog.html");
   }
 
