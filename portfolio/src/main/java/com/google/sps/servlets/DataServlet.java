@@ -17,10 +17,14 @@ package com.google.sps.servlets;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 import com.google.sps.data.Comment;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Date;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,13 +35,27 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  private ArrayList<Comment> comments = new ArrayList<Comment>();
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html");
-    String json = convertToJsonUsingGson(comments);
-    response.getWriter().println(json);
+    Query query = new Query("Comment").addSort("time", SortDirection.ASCENDING);
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+
+    List<Comment> comments = new ArrayList<>();
+    for (Entity entity : results.asIterable()) {
+      Date time = (Date) entity.getProperty("time");
+      String username = (String) entity.getProperty("username");
+      String content = (String) entity.getProperty("comment");
+
+      Comment comment = new Comment(time, username, content);
+      comments.add(comment);
+    }
+
+    Gson gson = new Gson();
+
+    response.setContentType("application/json;");
+    response.getWriter().println(gson.toJson(comments));
   }
 
   @Override
@@ -45,8 +63,6 @@ public class DataServlet extends HttpServlet {
     Date time = new Date();
     String username = getParameter(request, "username", "") + ": ";
     String comment = getParameter(request, "comment", "");
-    Comment newComment = new Comment(time, username, comment);
-    comments.add(newComment);
 
     Entity comEntity = new Entity("Comment");
     comEntity.setProperty("time", time);
