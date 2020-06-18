@@ -40,9 +40,9 @@
         <p1><a href="index.html">back</a></p1>
     </div>
   </body>
-  <body onload="getComments()" position="fixed" right="0" bottom="0">
+  <body onload="getComments()" position="absolute" left="2%">
       <div id="comments-container"></div>
-      <form action="/data" method="POST">
+      <form id="comments-form" action="/data" method="POST">
           <p1>Add a comment:</p1><br>
           <input type="text" name="comment"><br><br>
           <p1>Add your name (optional):</p1><br>

@@ -70,10 +70,20 @@ a:hover{
     border-radius: 10px;
 }
 
+#comments-form{ /*TO-DO: Format comment form to look nicer.*/
+    position: absolute;
+    right:2%;
+    top:45%;
+}
 #comments-container{
-    margin:20px;
-    background-color: #ffffff;
-    width: 400px;
+    position: absolute;
+    padding: 15px;
+    right:2%;
+    top:5%;
+    background-color: #cdd1c4;
+    width: 12%;
+    height: 35%;
+    overflow: hidden;
 }
 #title {
 }
