@@ -22,6 +22,7 @@ import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
 import com.google.sps.data.Comment;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,17 +53,25 @@ public class DataServlet extends HttpServlet {
       comments.add(comment);
     }
 
-    Gson gson = new Gson();
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    String rawString = gson.toJson(comments);
+    String finalString = rawString.replace("[\n", "").replace("]", "").replace(",", "").replace("{\n", "").replace("}", "");
 
-    response.setContentType("application/json;");
-    response.getWriter().println(gson.toJson(comments));
+    response.setContentType("text/html;");
+    response.getWriter().println(finalString);
   }
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Date time = new Date();
     String username = getParameter(request, "username", "") + ": ";
+    if (username.equals(": ")){
+        username = "N/A: ";
+    }
     String comment = getParameter(request, "comment", "");
+    if (comment.equals("")){ //TO-DO: Tell user that empty comments are not allowed.
+        return;
+    }
 
     Entity comEntity = new Entity("Comment");
     comEntity.setProperty("time", time);
