@@ -6,4 +6,4 @@ target/
 .idea
 
 #sensitive files ignore
-*.json
+nchu_cloudCredentials.json
