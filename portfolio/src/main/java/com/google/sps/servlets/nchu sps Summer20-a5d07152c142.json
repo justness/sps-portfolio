@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nchu-sps-summer20",
+  "private_key_id": "a5d07152c1424e09e7fc0c18353e4292e6c3529b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDL2jLoHCOhjmei\nyOFKxxOLq25EgRbRevzk5XQHbC5BCjfs6unZmOPGETxQTTQTVui1XhFOrnXG6Q2r\neIOFqYlTVR8iDNfX4pJQv1cxGLC4/WCRFHgalsgNHGVjUwvy1uN1hOt1wFvcsfmQ\nzqCH219gre3qrUEYgg7jq0PiG/Tf1xXidPZW1mvuFHWUY8jmxowQr8PkQOgeVcKu\npccb1XFhZOrecKWFvC9ZBYn4e8jdOT3x3BQuuPHKDeOh+O5Fg9C0EUrU0bEj0uo8\nRmyor4x/Yhsks/v5yYcnEtdzxl7ws3CpkM9XciwMKAmlwYH95YglyclntBtCZjdm\nsh4iXcv1AgMBAAECggEAILiH9lDZ+Usp4Gu9GeslfIRKYU2VM4+5uyYHf0+ChycU\nPf+hBK/xU7AdjcgupTIMjVwpjAcd2Y08B/uCpPhHFiyyIB2OodT45mQoIzXS3Aaz\nsuXlt2LffpdBwPUqFFMg1JK+1rpHJIAeznsUMmpof1S7vTENI1lw+WNatJcHMcyD\nnFeHXqLla+NOCbGqk2eazXOt12K5E1Z8gCo7KGG8DHtP0HjoU6Jvt+pE6sJ6mIm/\nVsZqepLXOMpEEYcaOVHu+GMZCKpLY/88uvJUcl5NnpPG4DBfuMKPjF1RfkJDw0Pm\nqguROuSQbi+Fx8Rlg9jSLAEkq1zxsSLhXodoBJ9LAQKBgQDmXDXy8M4U1NQqNnWd\nbc9wA0n4A7nD74/rtVx1pawQxZ1U+izsUkW+ywRE+qiKThk4lYbOjrQwPC/k1DSe\nTqhMWO9ByJkEk1b9uavmUHC8bTtC9uZUfyk2V5XT4Ectpk1Pm1HT9LDEaegRkHeP\n1LJlp23gL+yXFjXrQjTatj70gQKBgQDiiq8cXO/L1JH0cIrQAT26Fl2mIXdfahoU\n9ybA6qW4/Z/76ZOWDAhGeDmJsM4WtXhKK2M/JuqD0sYvrMzGa6QV08zWeL0boC1y\nm56K85YqkPrlLM/JKAxSikfbINUod9qpoRUUzjDRdsNVlhTf/QWs0oEg2WopuhB6\ncYqyEG2NdQKBgQDCKcDTN0MMbeMyfVqfSfpJWIxVPpaqXta4/tGi2/Ru4pHdGU0a\nF7JvwWCk332FrZQ2jFnm6oNYELLxtidvs67JQ0DO+sx2/dWZ4JDSfMS5HXyQ0diM\nKe5LvoEr5+M2x/BsA+dxttHzi6yueU09bzK62eeTyfEp2++wjspL+saPgQKBgGjn\nZ6dusexlhyD2bJFdwcPGT596p9ibPXCv8lYrUoqTh94Tj7BP6hUX3y0Pnp+NcSKH\nbPH1h2t70yKIllrbxaQF7Dj0uD1usxz7SzN1EPitIkG1upKf5PTj69phHdQbjDo4\nyZZU1O5qXJHpack/Vb1tzTX09+BStQa+RUenq9NxAoGAcnXKdk7HW7p+JCsXx2tS\nqpJrhVv2T0gfw7SmOC7tg9dc1AgW2qOe4RM4eQN34SHMTBCa5j5PryVb01tas3wo\nwq4ykvFdPuI7Mc1qGECKu6hOqZ1R6C25zmY1vb6pPPkpevyp7R5ajXq69/n76D4+\nLvKKHSTclVnEl/Wk2WaoClg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "nchu-894@nchu-sps-summer20.iam.gserviceaccount.com",
+  "client_id": "102746097058521301960",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nchu-894%40nchu-sps-summer20.iam.gserviceaccount.com"
+}
