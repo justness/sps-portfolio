@@ -1,2 +1,9 @@
+#whitelist
+!.gitignore
+
+#default ignore
 target/
 .idea
+
+#sensitive files ignore
+nchu_cloudCredentials.json

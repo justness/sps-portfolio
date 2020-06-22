@@ -75,4 +75,10 @@ function getComments(){
   }).then(data => console.log(data));
 }
 
+function getBlog(){
+    fetch('/blogData').then(response => response.text()).then((newBlog) => {
+    document.getElementById('blogpost').innerHTML = newBlog;
+  });
+}
+
 
