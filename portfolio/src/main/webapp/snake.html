@@ -5,15 +5,12 @@
     <title>&#128187</title>
     <link rel="stylesheet" href="style.css">
     <script src="snake.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&family=IBM+Plex+Mono:wght@100&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="snake()">
       <div id="content">
       <!--https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e/-->
-      <canvas id="snakeCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
-      <!--TO-DO: Figure out why onload does not work.-->
-      <script>
-        document.getElementById('snakeCanvas').onmouseover = function() {snake()};
-      </script><br>
+      <canvas id="snakeCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas><br>
       <p1><a href="index.html">back</a></p1>
       </div>
   </body>
