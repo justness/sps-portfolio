@@ -17,7 +17,7 @@ import java.io.File;
 @WebServlet("/blogData")
 public class BlogSentimentServlet extends HttpServlet{
 
-    String filePath = "../../src/main/java/com/google/sps/blogposts/060620.txt";
+    String filePath = "/blogposts/060620.txt";
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
