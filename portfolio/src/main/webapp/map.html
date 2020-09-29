@@ -34,6 +34,16 @@
           center: {lat: 40.7, lng: -74},
           zoom: 11
         });
+
+        map.addListener("click", function(e){
+            var marker = new google.maps.Marker({
+                position: e.latLng,
+                map: map
+                draggable: true,
+            });
+            marker.setMap(map);
+        });
+
         infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
