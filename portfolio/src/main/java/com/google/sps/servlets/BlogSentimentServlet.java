@@ -53,24 +53,24 @@ public class BlogSentimentServlet extends HttpServlet{
 
         reader.close();
 
-        LanguageServiceClient lS = LanguageServiceClient.create();
+        //LanguageServiceClient lS = LanguageServiceClient.create();
         for (int i = 0; i<sentences.length; i++){
             Document doc = Document.newBuilder().setContent(sentences[i]).setType(Document.Type.PLAIN_TEXT).build();
-            Sentiment sentiment = lS.analyzeSentiment(doc).getDocumentSentiment();
+            /*Sentiment sentiment = lS.analyzeSentiment(doc).getDocumentSentiment();
             float score = sentiment.getScore();
             int intScore = Math.round(score);
             System.out.println(score);
-            System.out.println(intScore);
+            System.out.println(intScore);*/
             String newS = sentences[i];
-            if (intScore == -1){
+            /*if (intScore == -1){
                 newS = "<p1 style=\"color:red;\">" + sentences[i] + "</p1>";
             }
             if (intScore == 1){
                newS = "<p1 style=\"color:green;\">" + sentences[i] + "</p1>";
-            }
+            }*/
             processed.add(newS);
         }
-        lS.close();
+        //lS.close();
 
         return processed;
     }
